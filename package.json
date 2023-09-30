@@ -1,0 +1,94 @@
+{
+  "name": "snippet-stylizer",
+  "displayName": "snippet_stylizer",
+  "author": {
+    "name": "DistroRickDev",
+    "url": "https://github.com/DistroRickDev"
+  },
+  "publisher": "DistroRickDev",
+  "description": "Simple extension to stylize a snippet ",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DistroRickDev/snippet-stylizer-vscode-extension"
+  },
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "keybindings": [
+      {
+        "command": "snippet-stylizer.stylize_camel_case",
+        "key": "ctrl+alt+c",
+        "mac": "cmd+alt+c"
+      },
+      {
+        "command": "snippet-stylizer.stylize_pascal_case",
+        "key": "ctrl+alt+p",
+        "mac": "cmd+alt+p"
+      },
+      {
+        "command": "snippet-stylizer.stylize_pascal_case_with_spaces",
+        "key": "ctrl+alt+i",
+        "mac": "cmd+alt+i"
+      },
+      {
+        "command": "snippet-stylizer.stylize_snake_case",
+        "key": "ctrl+alt+s",
+        "mac": "cmd+alt+s"
+      },
+      {
+        "command": "snippet-stylizer.stylize_upper_case",
+        "key": "ctrl+alt+u",
+        "mac": "cmd+alt+u"
+      }
+    ],
+    "commands": [
+      {
+        "command": "snippet-stylizer.stylize_camel_case",
+        "title": "Stylize Camel Case"
+      },
+      {
+        "command": "snippet-stylizer.stylize_pascal_case",
+        "title": "Stylize Pascal Case"
+      },
+      {
+        "command": "snippet-stylizer.stylize_pascal_case_with_spaces",
+        "title": "Stylize Pascal Case With Spaces"
+      },
+      {
+        "command": "snippet-stylizer.stylize_snake_case",
+        "title": "Stylize Snake Case"
+      },
+      {
+        "command": "snippet-stylizer.stylize_upper_case",
+        "title": "Stylize Upper Case"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.82.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "@vscode/test-electron": "^2.3.4",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.10",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6"
+  }
+}
